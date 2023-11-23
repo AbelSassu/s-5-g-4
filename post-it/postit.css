@@ -13,6 +13,16 @@ body{
     background:#dfe4ea;
     padding: 30px;
 }
+@keyframes squash {
+    from {
+        transform: translateY(-20px) scaleY(0.2);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scaleY(1);
+        opacity: 1;
+    }
+}
 ul{
     margin-top: 15em;
     margin-left: 20em;
@@ -34,6 +44,8 @@ ul li{
     margin: 20px;
     transform: rotate(-8deg);
     border-radius: 5px;
+    animation: squash 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation-delay: calc(0.1s * var(--delay));
 }
 h2{
     margin-top: 1.6em;
@@ -44,36 +56,44 @@ p{
     font-size: 1em;
 }
 ul li:nth-child(1){
+    --delay: 0.1s;
     transform: rotate(-4deg);
   }
 ul li:nth-child(2){
+    --delay: 1.4s;
     transform: rotate(5deg);
     background-color: #C7F7C7;
   }
 ul li:nth-child(3){
+    --delay: 0.4s;
     transform: rotate(-8deg);
     background-color: #C7C6F0;
   }
 ul li:nth-child(4){
-
+    --delay: 0.1s;
     transform: rotate(8deg);
     background-color: #C7F7C7;
   }
 ul li:nth-child(5){
+    --delay: 0.6s;
     transform: rotate(-4deg);
   }
 ul li:nth-child(6){
+    --delay: 1s;
     transform: rotate(-8deg);
     background-color: #C7C6F0;
   }
 ul li:nth-child(7){
+    --delay: 0.8s;
     transform: rotate(-4deg);
   }
 ul li:nth-child(8){
+    --delay: 0.3s;
     transform: rotate(6deg);
     background-color: #C7F7C7;
 }
 ul li:hover, ul li:focus{
+    --delay: 0.5s;
     position: relative;
     transform: scale(1.25);
     z-index: 10;
