@@ -4,7 +4,16 @@
   padding:0;
   box-sizing: border-box;
 }
-
+@keyframes fadeIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 body{
 
@@ -15,12 +24,6 @@ body{
     background:#dfe4ea;
     padding: 30px;
 }
-
-ul li{
-    align-items: center;
-    list-style: none;
-}
-
 ul{
     margin-top: 15em;
     margin-left: 20em;
@@ -29,8 +32,9 @@ ul{
     flex-wrap: wrap;
     justify-content: center;
 }
-
 ul li{
+    align-items: center;
+    list-style: none;
     text-decoration: none;
     color:#130f40;
     display: block;
@@ -40,7 +44,6 @@ ul li{
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     margin: 20px;
     transform: rotate(-8deg);
-    transition: transform 0.2s linear;
     border-radius: 5px;
 }
 h2{
@@ -81,8 +84,6 @@ ul li:nth-child(8){
     transform: rotate(6deg);
     background-color: #C7F7C7;
 }
-
-
 ul li:hover, ul li:focus{
     position: relative;
     transform: scale(1.25);
